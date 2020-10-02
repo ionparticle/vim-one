@@ -319,33 +319,34 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
     let s:visual_grey  = ['#3e4452', '17']
     let s:pmenu        = ['#333841', '16']
   else
-    let s:mono_1 = ['#494b53', '23']
-    let s:mono_2 = ['#696c77', '60']
-    let s:mono_3 = ['#a0a1a7', '145']
-    let s:mono_4 = ['#c2c2c3', '250']
+    let s:mono_1 = ['#000000', '23']
+    let s:mono_2 = ['#303030', '60']
+    let s:mono_3 = ['#606060', '145']
+    let s:mono_4 = ['#909090', '250']
 
-    let s:hue_1  = ['#0184bc', '31'] " cyan
-    let s:hue_2  = ['#4078f2', '33'] " blue
-    let s:hue_3  = ['#a626a4', '127'] " purple
-    let s:hue_4  = ['#50a14f', '71'] " green
+    let s:hue_1  = ['#008b8b', '31'] " cyan
+    let s:hue_2  = ['#0000ff', '33'] " blue
+    let s:hue_3  = ['#cf00cf', '127'] " purple
+    let s:hue_4  = ['#00af00', '71'] " green
 
-    let s:hue_5   = ['#e45649', '166'] " red 1
+    let s:hue_5   = ['#ff0000', '166'] " red 1
     let s:hue_5_2 = ['#ca1243', '160'] " red 2
 
-    let s:hue_6   = ['#986801', '94'] " orange 1
-    let s:hue_6_2 = ['#c18401', '136'] " orange 2
+    let s:hue_6   = ['#a1a100', '94'] " orange 1
+    let s:hue_6_2 = ['#ff7c00', '136'] " orange 2
 
-    let s:syntax_bg     = ['#fafafa', '255']
+    let s:syntax_bg     = ['#ffffff', '128']
     let s:syntax_gutter = ['#9e9e9e', '247']
     let s:syntax_cursor = ['#f0f0f0', '254']
 
-    let s:syntax_accent = ['#526fff', '63']
-    let s:syntax_accent_2 = ['#0083be', '31']
+    let s:syntax_accent = ['#00bfff', '63']
+    let s:syntax_accent_2 = ['#40e0d0', '31']
 
     let s:vertsplit    = ['#e7e9e1', '188']
     let s:special_grey = ['#d3d3d3', '251']
-    let s:visual_grey  = ['#d0d0d0', '251']
-    let s:pmenu        = ['#dfdfdf', '253']
+    let s:visual_grey  = ['#fff760', '251']
+	let s:diff_grey    = ['#fefee2', '251']
+    let s:pmenu        = ['#eaffea', '253']
   endif
 
   let s:syntax_fg = s:mono_1
@@ -444,15 +445,15 @@ if has('gui_running') || has('termguicolors') || &t_Co == 88 || &t_Co == 256
   " }}}
 
   " Diff highlighting -------------------------------------------------------{{{
-  call <sid>X('DiffAdd',     s:hue_4, s:visual_grey, '')
-  call <sid>X('DiffChange',  s:hue_6, s:visual_grey, '')
-  call <sid>X('DiffDelete',  s:hue_5, s:visual_grey, '')
-  call <sid>X('DiffText',    s:hue_2, s:visual_grey, '')
-  call <sid>X('DiffAdded',   s:hue_4, s:visual_grey, '')
-  call <sid>X('DiffFile',    s:hue_5, s:visual_grey, '')
-  call <sid>X('DiffNewFile', s:hue_4, s:visual_grey, '')
-  call <sid>X('DiffLine',    s:hue_2, s:visual_grey, '')
-  call <sid>X('DiffRemoved', s:hue_5, s:visual_grey, '')
+  call <sid>X('DiffAdd',     s:hue_4, s:diff_grey, '')
+  call <sid>X('DiffChange',  s:hue_6, s:diff_grey, '')
+  call <sid>X('DiffDelete',  s:hue_5, s:diff_grey, '')
+  call <sid>X('DiffText',    s:hue_2, s:diff_grey, '')
+  call <sid>X('DiffAdded',   s:hue_4, s:diff_grey, '')
+  call <sid>X('DiffFile',    s:hue_5, s:diff_grey, '')
+  call <sid>X('DiffNewFile', s:hue_4, s:diff_grey, '')
+  call <sid>X('DiffLine',    s:hue_2, s:diff_grey, '')
+  call <sid>X('DiffRemoved', s:hue_5, s:diff_grey, '')
   " }}}
 
   " Asciidoc highlighting ---------------------------------------------------{{{
